@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1> Aplikasi Pembayaran Kasir
+</h1>
+
+<body>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>
+                    NO
+                </th>
+                <th>
+                    Daftar Makanan
+                </th>
+                <th width=200px>
+                    Harga
+                </th>
+                <th>
+                    Pesan
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    Bakso Spesial
+                </td>
+                <td>
+                    @Rp : 25.000
+                </td>
+                <td>
+                    <input type="text" id="Jumlah_Spesial" onchange="Menu_Qhistin()">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    2
+                </td>
+                <td>
+                    Bakso Istimewa
+                </td>
+                <td>
+                    @Rp : 20.000
+                </td>
+                <td>
+                    <input type="text" id="Jumlah_Istimewa" onchange="Menu_Qhistin()">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    3
+                </td>
+                <td>
+                    Bakso Bakar
+                </td>
+                <td>
+                    @Rp : 15.000
+                </td>
+                <td>
+                    <input type="text" id="Jumlah_Bakar" onchange="Menu_Qhistin()">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    4
+                </td>
+                <td>
+                    Bakso Biasa
+                </td>
+                <td>
+                    @Rp : 10.000
+                </td>
+                <td>
+                    <input type="text" id="Jumlah_Biasa" onchange="Menu_Qhistin()">
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="3" align="right">
+                    Member/Tidak
+
+                </td>
+                <td>
+                    <button>
+                        <select>
+                            <option>Member</option>
+                            <option>Bukan Member</option>
+                        </select>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="right">
+                    Total
+                </td>
+                <td>
+                    <input type="text" id="si_total" onchange="Menu_Qhistin()" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="right">
+                    Diskon
+                </td>
+                <td>
+                    <input type="text" id="DISKONN" onchange="Menu_Qhistin()" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="right">
+                    Total bayar
+                </td>
+                <td>
+                    <input type="text" id="si_diskon" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="right">
+                    <font color="red">
+                        Keterangan : Diskon apabila total pembelian diatas 100.000
+                    </font>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        var total;
+
+        function Menu_Qhistin() {
+            var jumlahS = document.getElementById('Jumlah_Spesial').value;
+            var jumlahI = document.getElementById('Jumlah_Istimewa').value;
+            var jumlahBk = document.getElementById('Jumlah_Bakar').value;
+            var jumlahBi = document.getElementById('Jumlah_Biasa').value;
+
+
+            var jumlahSpesial = parseInt(jumlahS);
+            var jumlahIstimewa = parseInt(jumlahI);
+            var jumlahBakar = parseInt(jumlahBk);
+            var jumlahBiasa = parseInt(jumlahBi);
+
+
+            var hasilSpesial = 25000 * jumlahSpesial;
+            var hasilIstimewa = 20000 * jumlahIstimewa;
+            var hasilBakar = 15000 * jumlahBakar;
+            var hasilBiasa = 10000 * jumlahBiasa;
+            total = hasilSpesial + hasilIstimewa + hasilBakar + hasilBiasa;
+            document.getElementById('si_total').value = total;
+
+            if (total >= 100000) {
+                var dizkon = total * (10 / 100);
+                total_diskon = total - dizkon;
+                document.getElementById('DISKONN').value = dizkon;
+                document.getElementById('si_diskon').value = total_diskon;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Praktikum-2</title>
+</head>
+
+<body>
+    <input id="numb" placeholder="Masukkan angka">
+
+    <button type="button" onclick="myFunction()">Cek</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var x, cek = 0,
+                i;
+
+            x = document.getElementById("numb").value;
+
+            for (i = 2; i < (x - 1); i++) {
+                if (x % i === 0) {
+                    document.getElementById("demo").innerHTML = x + " bukan bilangan prima";
+                } else {
+                    document.getElementById("demo").innerHTML = x + " bilangan prima";
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

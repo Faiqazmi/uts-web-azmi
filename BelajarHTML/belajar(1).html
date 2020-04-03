@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--Menandakan HTML5-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Belajar Sesi 1</title>
+    <link rel="stylesheet" href="belajar(2).css">
+</head>
+
+<body>
+    <!-- Belajar heading -->
+    <br>
+    <br>
+
+    <h1>ini heading 1</h1>
+    <h6>ini heading 6</h6>
+
+
+    <!-- Belajar HyperLink/Anchor -->
+    <br>
+    <br>
+
+    <p><a href="https://www.google.com/" target="_blank">ini Merupakan Anchor (Google)</a></p>
+    <p><a href="https://www.youtube.com/" target="_blank">ini Merupakan Anchor (Youtube)</a></p>
+
+    <hr>
+    <hr>
+
+    <p><a href="#Header">ke div 1</a></p>
+    <!--Page Anchor menggunakan id dengan href=" using '#' "-->
+    <p><a href="#Content">ke div 2</a></p>
+
+
+    <!-- Belajar Menampilkan Image -->
+    <br>
+    <br>
+
+    <!-- Atribut dalam tag 'img'= src, alt, title, width (px)(%), height (px)(%) -->
+    (external Resource)
+    <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjD6VIZRTFJKabgW6ABHOWNYHCpJUQN_1ohf-D12NEv_c2Voz0">
+    <br>
+    <!--Mengambil Gambar-->
+
+    (internal Resource)
+    <img src="Fb.png" alt="Logo Facebook" title="Ini Logo facebook" width="150">
+    <!--Download Gambar-->
+
+
+    <!-- Belajar Membuat Tabel -->
+    <br>
+    <br>
+
+    <!-- Atribut dalam tag 'Table' = border (css), cellspacing (css), cellpadding (css), colspan, rowspan -->
+    <!-- Tabel simple -->
+    <table border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <!--Baris-->
+            <td><strong>Nomer</strong></td>
+            <!--Kolom-->
+            <td><strong> Asal </strong></td>
+            <td> <strong> Nama </strong></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td colspan="2">haiq</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Madura</td>
+            <td>Faiq</td>
+        </tr>
+        <tr>
+            <td colspan="2">3</td>
+            <td rowspan="2">5</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <!-- Tabel Kompleks -->
+    <table border="2">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Nama</th>
+                <th>NIM</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>Azmi</td>
+                <td>047</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>J.Bond</td>
+                <td>009</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>quinzel</td>
+                <td>069</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- Belajar Tag Form 'input (Text)-->
+    <!-- input type = "text, password, radio, checkbox, submit, reset, button" -->
+    <br>
+    <br>
+
+    <Form>
+        <!--Proses pengiriman data menggunakan atribut (action="DataKelas.Mahasiswa"-->
+        <label>
+            <p>Nama :</p>
+            <p><input type="text" placeholder="Masukan Nama"></p>
+        </label>
+        <label>
+            <p>Asal :</p>
+            <p><input type="text" placeholder="Masukan Alamat"></p>
+        </label>
+
+
+
+        <!-- Belajar Tag Form 'input (checkbox)' -->
+        <br>
+        <br>
+
+        Gelar : <br>
+        <label for="glr">
+            <input type="checkbox" id="glr"> s.T <br>
+        </label>
+        <label for="glr2">
+            <input type="checkbox" id="glr2"> s.KOM <br>
+        </label>
+
+
+
+        <!-- Belajar Tag Form 'input (radio)' -->
+        <br>
+        <br>
+
+        Gelar : <br>
+        <label for="rd">
+            <input type="radio" name="gelar" id="rd"> s.T <br>
+        </label>
+        <label for="rd2">
+            <input type="radio" name="gelar" id="rd2"> s.KOM <br>
+        </label>
+
+
+        <!-- Belajar Tag Form 'input (Submit)' -->
+        <br>
+        <br>
+
+        <label>
+            <input type="submit" value="Kirim dong">
+        </label>
+    </form>
+
+
+    <!-- Belajar Tag Form 'input (Password)' -->
+    <br>
+    <br>
+    Masukkan password :
+    <label for="pw">
+        <input type="password" id="pw">
+    </label>
+    </form>
+
+    <!-- Belajar Tag form Drop down box 'Select' -->
+    <br>
+    <br>
+
+
+    <label>
+        Jurusan :
+        <select>
+            <option>Informatika</option>
+            <option>Industri</option>
+            <option>Mesin</option>
+            <option>Elektro</option>
+            <option>Sipil</option>
+        </select>
+    </label>
+
+
+    <!-- Belajar Tag Form 'Textarea' -->
+    <br>
+    <br>
+
+    <label>
+        isi pesan (Textarea):
+        <br>
+        <br>
+        <textarea placeholder="Di isi dong"></textarea>
+    </label>
+
+
+
+    <!-- Belajar  menggunakan List 'Ordered List'-->
+    <br>
+    <br>
+
+    <ol type="A">
+        <!--Type = A,a,1,I,i-->
+        <b>INI ORDERED LIST</b>
+        <li>Bangun</li>
+        <li>Makan</li>
+        <li>Minum</li>
+        <li>Tidur</li>
+    </ol>
+
+
+    <!-- Belajar Menggunakan List 'UnOrdered List' -->
+    <br>
+    <br>
+
+    <ul>
+        <b>INI UNORDERED LIST</b>
+        <li>ITS</li>
+        <li>UMM</li>
+        <li>UGM</li>
+        <li>BINUS</li>
+    </ul>
+
+
+    <!-- Belajar Menggunakan List 'Definition List' -->
+    <br>
+    <br>
+
+    <dl>
+        <b>INI DEFINITION LIST</b>
+        <dt>DT</dt>
+        <dd>DEFINITION TERM</dd>
+        <dt>DD</dt>
+        <dd>DEFINITION DESCRIPTION</dd>
+    </dl>
+
+
+
+    <!-- Belajar Tag 'Division' dan 'span' -->
+    <br>
+    <br>
+
+    <div id="Header" class="Menu">
+        Ini Merupakan Div
+    </div>
+    <div id="Content" class="Menu">
+        Ini Merupakan Div 2
+    </div>
+
+    <span id="">
+        Ini Merupakan Span
+    </span>
+    <span>
+        Ini Merupakan Span 2
+    </span>
+</body>
+
+</html>

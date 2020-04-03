@@ -1,0 +1,194 @@
+h1 {
+    color: sandybrown;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-variant: small-caps;
+    font-style: oblique;
+    font-size: 1000%;
+
+}
+
+#p1 {
+    color: rgb(43, 5, 5);
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 30px;
+    text-align: justify;
+    text-decoration: line-through;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-indent: 100px;
+}
+
+.p2 {
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 30px;
+    text-align: justify;
+    text-decoration: none;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-indent: 50px;
+
+}
+
+body {
+
+    background-color: white;
+    background-image: url(canadian-dollar/canadian-dollar.png);
+    background-repeat: repeat-x;
+
+
+}
+
+
+/* Font Styling =
+
+    font-family : Mengatur jenis font yang akan digunakan
+    font-size   : Mengatur ukuran font                      (Px, %, em)
+    font-weight : Mengatur ketebalan font                   (lighter, normal, 100-900, bold, bolder)
+    font-variant: Mengubah font menjadi small caps          (normal, samll-caps)
+    font-style  : Mengubah font menjadi bercetak miring     (normal, italic, oblique)
+    line-height : Mengatur spasi antar baris                (normal, px, em)
+*/
+
+/* Text Styling = 
+
+    color           : Memberi warna pada tulisan                                (Nama warna, hexadecimal, rgb)
+    text-align      : Mengatur format paragraf/teks                             (left(rata kiri), right(rata kanan), center(rata tengah), justify(rata kiri-kanan))
+    text-indent     : Memberi indentasi pada paragraf/teks                      (px, %)
+    text-decoration : Mengatur dekorasi pada teks                               (none, underline, overline, line-through)
+    text-transform  : Mengubah jenis huruf menjadi huruf besar, kecil/kapital   (none, lowercase, uppercase, capitalize)
+    letter-spacing  : Mengatur spasi antar huruf                                (px, %)
+    word-spacing    : Mengatur spasi antar kata                                 (px, %)
+*/
+
+/* Background =
+
+    background-color    : Mengatur warna pada background                        (color)
+    background-image    : Mengatur gambar yang akan digunakan pada background   (url)
+    background-position : Mengatur posisi gambar pada background                (top left, top center, top right, center left, center left, center center, center right, bottom left, bottom center, bottom right, x% y%, x-pos y-pos)
+    background-repeat   : Mengatur jenis pengulangan gambar pada background     (repeat-x, repeat-y, no-repeat)
+
+    shortcode : background: color url() position repeat;
+*/
+
+/* CSS Selector =
+
+    - elemen HTML :
+        (title, head, body, h1, table)
+
+        it can be :
+
+        - grouping (,), ex: (Berikan warna 'green' pada h1 dan h2)
+            h1,h2 {
+                color : green;
+            }
+        
+        - specific grouping (spasi), ex: (Berikan warna 'orange' pada tag 'a' di dalam 'li' di dalam 'ul')
+            ul li a{
+                color : orange;
+            }
+
+    - id :
+        - Sebuah elemen HTML hanya boleh memiliki 1 id
+        - Setiap halaman hanya boleh memiliki 1 elemen dengan id tersebut
+        - Dapat digunakan sebagai penanda halaman untuk link
+        - Dapat digunakan juga sebagai JavaScript
+        - Sebaiknya tidak digunakan untuk CSS 
+
+        ex :
+            index.html
+        <p id="paragraf1"> Hello Bitches!! </p>
+
+            Style.css
+        #paragraf1{ (beri warna 'green' pada tag yang ber-id 'paragraf1') 
+            color : green;
+        }
+
+            
+    - class :
+        - Sebuah elemen HTML boleh memiliki lebih dari 1 id
+        - Setiap halaman boleh memiliki lebih dari 1 elemen dengan class tersebut
+        - Dapat digunakan sebagai penanda halaman untuk link
+        - Dapat digunakan juga sebagai JavaScript
+        - Penggunaannya lebih disarankan dari pada menggunakan 'id'
+
+        ex :
+            index.html
+        <p class ="c1"> Hello Bitches!! </p>
+        <h1 class ="c1"> Ini Judulnya </h1>
+
+            Style.css
+        .c1{ (beri warna 'red' pada tag yang ber-class 'c1') 
+            color : red;
+        }
+
+        p.c1{ (beri font 'arial' pada tag 'p' yang ber-class 'c1') 
+            font-family : arial;
+        }
+
+        
+    - complex selector :
+
+        HIERARKI SELECTOR
+        1.Elemen HTML
+        2.Class
+        3.Id
+
+*/
+
+/* Pseudo-Class = Merupakan kelas semu yang dimiliki oleh sebuah elemen HTML yang membuat kita dapat mendefinisikan style pada "keadaan tertentu" dari elemen tersebut 
+    
+    Pseudo-Class yang berhubungan dengan 'Link' :
+
+    - link      : Style default pada sebuah link ('a' yang memiliki href)
+    - hover     : Style ketika kursor mouse berada diatas sebuah link/elemen
+    - active    : Style ketika sebuahlink di-klik (keadaan aktif)
+    - visited   : Style ketika sebuah link sudah pernah dikunjungi sebelumnya (menggunakan browser yang sama)
+
+    Pseudo-Class yang berhubungan dengan posisi elemen (1) :
+
+    - first-child   : Memilih elemen pertama dari sebuah parent (elemen pembungkusnya)
+    - last-child    : Memilih elemen terakhir dari sebuah parent (elemen pembungkusnya)
+    - nth-child (n) : Memilih elemen ke-n dari sebuah parent (elemen pembungkusnya)
+
+        n = bisa berupa urutan angka (1/2/4/9) atau berupa pola (2n,3n+2, 4n-1) atau ganjil (even) dan genap (odd)
+    
+    Pseudo-Class yang berhubungan dengan posisi elemen (2) :
+    - first-of-type : Memilih elemen pertama dari sebuah jenis/tipe tag
+    - :last-of-type : Memilih elemen terakhir dari sebuah jenis/tipe tag
+*/
+
+/* CONTOH PSEUDO CLASS */
+.hello :link {
+    color: blue
+}
+
+.hello :hover {
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 100px;
+}
+
+li:first-child a {
+    color: red;
+}
+
+li:last-child a:hover {
+    font-size: 100px;
+    color: seagreen;
+}
+
+li:nth-child(odd) a:hover {
+    font-size: 50px;
+    color: yellow;
+}
+
+p:first-of-type {
+    color: rebeccapurple;
+}
+
+p:last-of-type {
+    color: seagreen;
+}

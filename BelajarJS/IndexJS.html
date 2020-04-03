@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>UTS</title>
+
+    <script>
+        function fn() {
+            var jumlah = parseInt(document.kirim.bil_1.value);
+            var penjualan = parseInt(document.kirim.bil_2.value);
+            var hasil
+
+            if (jumlah < 10) {
+                hasil = penjualan * (5 / 100)
+            } else if (jumlah => 10 && jumlah <= 50) {
+                if (penjualan < 1000000) {
+
+                    hasil = penjualan * (10 / 100);
+
+                } else {
+                    hasil = penjualan * (12.5 / 100);
+                }
+            } else {
+
+                hasil = penjualan * (15 / 100);
+            }
+
+            document.querySelector('#orang').innerHTML = `Jumlah Orang :${jumlah}`
+            document.querySelector('#penjualan').innerHTML = `jumlah Penjualan :${penjualan}`
+            document.querySelector('#komisi').innerHTML = `hasil komisi :${hasil}`
+        };
+    </script>
+
+</head>
+
+<body>
+    <form action="" method="get" name="kirim">
+        <h2>Aplikasi Sederhana Hitung Komisi MLM </h2>
+
+        Jumlah Orang : <input type="text" name="bil_1">
+        Jumlah Penjualan : <input type="text" name="bil_2">
+        <br><br><br>
+        <input type="button" value="Submit" onclick="fn()">
+
+
+        <p id="orang">Jumlah Orang : </p>
+        <p id="penjualan">jumlah Penjualan : </p>
+        <P id="komisi">hasil komisi : </P>
+    </form>
+
+
+</body>
+
+</html>

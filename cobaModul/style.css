@@ -1,0 +1,144 @@
+main {
+    display: flex;
+}
+
+.logo {
+    position: relative;
+    margin-bottom: 5px;
+    padding: 15px 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 60px;
+    top: -30px;
+}
+
+#text1 {
+    position: relative;
+    margin-bottom: -70px;
+    padding: 15px 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 20px;
+    top: -35px;
+}
+
+#text2 {
+    position: relative;
+    margin-bottom: -70px;
+    padding: 15px 0;
+    width: 100%;
+    height: auto;
+    text-align: left-side;
+    font-size: 15px;
+    top: -10px;
+}
+
+#text3 {
+    position: relative;
+    margin-bottom: -70px;
+    padding: 15px 0;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-size: 45px;
+    top: -10px;
+}
+
+#caption {
+    position: relative;
+    margin-bottom: -70px;
+    padding: 15px 0;
+    width: 100%;
+    height: auto;
+    text-align: left-side;
+    font-size: 20px;
+    top: -30px;
+}
+
+#gambarkiri {
+    width: 25%;
+    height: width;
+    align: center;
+}
+
+#gambarkanan {
+    position: relative;
+    width: 30%;
+    height: width;
+    align: center;
+    top: 70px;
+}
+
+.navigasi {
+    position: relative;
+    margin-bottom: 5px;
+    padding: 15px 0;
+    width: 100%;
+    height: auto;
+    background: darkred;
+    text-align: center;
+    font-size: 25px;
+    display: inline-table;
+}
+
+.navigasi ul {
+    list-style: none;
+}
+
+.navigasi ul li {
+    float: left;
+}
+
+.navigasi ul li a {
+    display: block;
+    padding: 20px;
+    color: #bdc3c7;
+    text-decoration: none;
+}
+
+.konten {
+    position: relative;
+    margin-bottom: 5px;
+    padding: 30px 0;
+    width: 70%;
+    text-align: left-side;
+    font-size: 40px;
+    top: 10px;
+}
+
+.sidebar {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 30px 0;
+    width: 20%;
+    text-align: left-side;
+    font-size: 40px;
+    top: 10px;
+    background-color: firebrick;
+}
+
+.footer {
+    position: relative;
+    margin-bottom: 5px;
+    padding: 15px 0;
+    width: 100%;
+    background: darkred;
+    text-align: center;
+}
+
+.list {
+    list-style: none;
+    font-size: 30px;
+    color: black;
+}
+
+.list li a {
+
+    transition: all 0.3 ease 0s;
+}
+
+.list li a:hover {
+    color: floralwhite;
+}

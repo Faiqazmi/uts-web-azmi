@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas1Praktikum</title>
+</head>
+
+<body>
+    <div class="kotak" id="kotak" style="width: 100px; height: 100px; background-color: black;">Hello Gais!</div>
+    <br>
+
+    <button onclick="alert_size()">alert ukuran kotak</button>
+    <button onclick="alert_color()">alert warna kotak</button>
+    <!-- onclick=adalah event jika sebuah element html diklik
+            -->
+    <br>
+
+    <p>
+        <input type="text" name="panjang" id="panjang" placeholder="Panjang" /><br>
+        <!-- (name ="") = Menentukan nama elemen <input>-->
+        <input type="text" name="lebar" id="lebar" placeholder="Lebar" /><br>
+    </p>
+    <button onclick="size()">Ubah ukuran</button>
+
+    <script>
+        function alert_color() {
+
+            if (document.getElementById('kotak').style.backgroundColor ==
+                "black"
+            ) { //getElementById = Mengembalikan elemen yang memiliki atribut id yang nilainya sudah ditentukan
+                document.getElementById('kotak').style.backgroundColor = "blue";
+            } else if (document.getElementById('kotak').style.backgroundColor == "blue") {
+                document.getElementById('kotak').style.backgroundColor = "yellow";
+            } else if (document.getElementById('kotak').style.backgroundColor == "yellow") {
+                document.getElementById('kotak').style.backgroundColor = "black";
+            }
+        }
+
+        function size() {
+            var txt_panjang = document.getElementById("panjang").value;
+            var txt_lebar = document.getElementById("lebar").value;
+
+            document.getElementById('kotak').style.width = txt_panjang + "px";
+            document.getElementById('kotak').style.height = txt_lebar + "px";
+        }
+
+        function alert_size() {
+            var panjang = document.getElementById('kotak').style.width;
+            var lebar = document.getElementById('kotak').style.height;
+            confirm("Ukuran kotak sekarang adalah " + panjang + " x " + lebar);
+        }
+    </script>
+
+</body>
+
+</html>
